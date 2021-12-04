@@ -5,7 +5,6 @@ import { DocumentText as DocumentTextIcon } from '../icons/document-text';
 import { Home as HomeIcon } from '../icons/home';
 import { ShoppingCart as ShoppingCartIcon } from '../icons/shopping-cart';
 import { Star as StarIcon } from '../icons/star';
-import { User as UserIcon } from '../icons/user';
 
 const items = [
   {
@@ -19,11 +18,6 @@ const items = [
     label: 'Orders'
   },
   {
-    href: '/dashboard/settings',
-    icon: CogIcon,
-    label: 'Settings'
-  },
-  {
     href: '/dashboard/theme',
     icon: DocumentTextIcon,
     label: 'Theme'
@@ -34,10 +28,15 @@ const items = [
     label: 'Icons'
   },
   {
-    href: '/404',
-    icon: UserIcon,
-    label: '404'
+    href: '/dashboard/receivings',
+    icon: CogIcon,
+    label: 'Receivings'
   },
+  // {
+  //   href: '/404',
+  //   icon: UserIcon,
+  //   label: '404'
+  // },
 ];
 
 export const Sidebar = () => {
