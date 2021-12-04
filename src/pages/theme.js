@@ -4,7 +4,7 @@ import { Box, Card, Container, Grid, Link, Typography } from '@material-ui/core'
 export const Theme = () => (
   <>
     <Helmet>
-      <title>Theme | Carpatin Dashboard</title>
+      <title>Theme | Dashboard</title>
     </Helmet>
     <Box
       sx={{

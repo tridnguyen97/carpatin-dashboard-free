@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import { Link as RouterLink } from 'react-router-dom';
-import { format } from 'date-fns';
 import {
   Box,
   Chip,
@@ -43,16 +42,46 @@ export const OrdersTable = (props) => {
           <TableHead>
             <TableRow>
               <TableCell>
-                Order
+                Account
               </TableCell>
               <TableCell>
-                Date
+                Item
               </TableCell>
               <TableCell>
-                Customer
+                Vendor
               </TableCell>
               <TableCell>
-                Status
+                Qty
+              </TableCell>
+              <TableCell>
+                Unit
+              </TableCell>
+              <TableCell>
+                Packing
+              </TableCell>
+              <TableCell>
+                DeliveryTime
+              </TableCell>
+              <TableCell>
+                Warehouse
+              </TableCell>
+              <TableCell>
+                LogMode
+              </TableCell>
+              <TableCell>
+                NoteToVendor
+              </TableCell>
+              <TableCell>
+                CreatedBy
+              </TableCell>
+              <TableCell>
+                Price
+              </TableCell>
+              <TableCell>
+                TotalQty
+              </TableCell>
+              <TableCell>
+                Thanhtien_temp
               </TableCell>
             </TableRow>
           </TableHead>
@@ -81,24 +110,54 @@ export const OrdersTable = (props) => {
                         color="inherit"
                         variant="inherit"
                       >
-                        {format(new Date(order.createdAt), 'dd MMM yyyy')}
+                        {order.account}
                       </Typography>
                       <Typography
                         color="textSecondary"
                         variant="inherit"
                       >
-                        {format(new Date(order.createdAt), 'HH:mm')}
+                        {order.item}
                       </Typography>
                     </Box>
                   </TableCell>
                   <TableCell>
-                    {`${order.customer.firstName} ${order.customer.lastName}`}
+                    {order.vendor}
                   </TableCell>
                   <TableCell>
                     <Chip
                       label={statusVariant.label}
                       variant="outlined"
                     />
+                  </TableCell>
+                  <TableCell>
+                    {order.quantity}
+                  </TableCell>
+                  <TableCell>
+                    {order.unit}
+                  </TableCell>
+                  <TableCell>
+                    {order.packing}
+                  </TableCell>
+                  <TableCell>
+                    {order.delivery_time}
+                  </TableCell>
+                  <TableCell>
+                    {order.ware_house}
+                  </TableCell>
+                  <TableCell>
+                    {order.log_mode}
+                  </TableCell>
+                  <TableCell>
+                    {order.note_to_vendor}
+                  </TableCell>
+                  <TableCell>
+                    {order.vendor}
+                  </TableCell>
+                  <TableCell>
+                    {order.vendor}
+                  </TableCell>
+                  <TableCell>
+                    {order.vendor}
                   </TableCell>
                 </TableRow>
               );
